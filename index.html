@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap B1 Vocabulary & Grammar Guide - Units 9-10</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 15px;
+            line-height: 1.8;
+            font-size: 18px;
+            color: #333;
+            direction: ltr;
+            text-align: left;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+        }
+        header h1 { font-size: 2em; margin-bottom: 10px; font-weight: bold; }
+        header p { opacity: 0.95; font-size: 1.3em; }
+        
+        .search-box {
+            padding: 20px 25px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            transition: border-color 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #searchInput:focus { outline: none; border-color: #667eea; }
+        
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            padding: 12px 15px;
+            gap: 8px;
+        }
+        .tab-btn {
+            padding: 14px 22px;
+            border: none;
+            background: white;
+            color: #667eea;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s;
+            flex: 1;
+            min-width: 140px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .tab-btn:hover { background: #667eea; color: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .tab-btn.active { background: #667eea; color: white; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
+        
+        .content { padding: 30px; }
+        .section { display: none; animation: fadeIn 0.5s; }
+        .section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .vocab-box, .grammar-box {
+            background: #f8f9fa;
+            border-left: 6px solid #667eea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+        .vocab-box h3, .grammar-box h3 { 
+            color: #667eea; 
+            margin-bottom: 20px; 
+            font-size: 1.6em; 
+            font-weight: bold;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 12px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            font-size: 17px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 2px solid #e9ecef;
+            vertical-align: top;
+        }
+        th { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            font-weight: 700; 
+            font-size: 18px;
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #f0f4ff; }
+        
+        .keyword {
+            background: #fff3cd;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: #856404;
+            font-family: 'Courier New', monospace;
+            font-size: 17px;
+            display: inline-block;
+            margin: 3px 0;
+        }
+        
+        .arabic-label {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            direction: rtl;
+            text-align: right;
+            unicode-bidi: bidi-override;
+        }
+        
+        .arabic-grammar-note {
+            background: #e3f2fd;
+            padding: 12px 18px;
+            border-left: 4px solid #2196f3;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            direction: rtl;
+            text-align: right;
+            unicode-bidi: bidi-override;
+        }
+        
+        .arabic-grammar-note .eng-term {
+            direction: ltr;
+            unicode-bidi: bidi-override;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .quiz {
+            background: #e8f4fd;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #007bff;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,123,255,0.15);
+        }
+        .quiz h4 { 
+            color: #007bff; 
+            margin-bottom: 18px; 
+            font-size: 1.5em; 
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .quiz ol { 
+            margin-left: 30px; 
+            margin-bottom: 20px; 
+            font-size: 17px;
+            line-height: 2.2;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .quiz li { 
+            margin-bottom: 15px; 
+            padding: 8px 0;
+        }
+        
+        .answers {
+            background: #d4edda;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+            font-size: 17px;
+            font-weight: 600;
+            border-left: 4px solid #28a745;
+            font-family: 'Times New Roman', Times, serif;
+            direction: rtl;
+            text-align: right;
+        }
+        .answers.show { display: block; animation: slideDown 0.4s; }
+        @keyframes slideDown { from { opacity: 0; max-height: 0; } to { opacity: 1; max-height: 300px; } }
+        
+        .show-answers {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .show-answers:hover { background: #218838; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4); }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.35);
+        }
+        .tip-box h4 { margin-bottom: 12px; font-size: 1.4em; font-weight: bold; font-family: 'Times New Roman', Times, serif; }
+        .tip-box p, .tip-box li { font-size: 17px; line-height: 2; font-family: 'Times New Roman', Times, serif; }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; border-radius: 0; }
+            .nav-tabs, .search-box, .print-btn { display: none; }
+            .section { display: block !important; page-break-after: always; }
+            .vocab-box, .grammar-box, .quiz { page-break-inside: avoid; }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.7em; }
+            header p { font-size: 1.1em; }
+            .nav-tabs { flex-direction: column; }
+            .tab-btn { width: 100%; font-size: 15px; }
+            .content { padding: 20px; }
+            table { font-size: 16px; }
+            th, td { padding: 14px 16px; }
+            body { font-size: 16px; }
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .print-btn:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); background: #5a6fd6; }
+        
+        .hidden { display: none !important; }
+        .option { 
+            cursor: pointer; 
+            padding: 6px 14px; 
+            border-radius: 8px; 
+            margin: 0 5px; 
+            font-size: 16px;
+            font-weight: 600;
+            background: white;
+            border: 2px solid #ddd;
+            transition: all 0.2s;
+            display: inline-block;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .option:hover { background: #e9ecef; border-color: #667eea; }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 25px;
+            border-radius: 12px;
+            margin: 30px 0 20px;
+            font-size: 1.5em;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        pre.ltr-block {
+            direction: ltr;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 16px;
+            overflow-x: auto;
+            border: 2px solid #e9ecef;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Roadmap B1 Vocabulary & Grammar Guide</h1>
+        <p>Units 9-10 | Vocabulary Separate | Grammar Separate | Complete Content</p>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for English keywords...">
+    </div>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="showSection('vocab')">📖 Vocabulary</button>
+        <button class="tab-btn" onclick="showSection('grammar')">⚙️ Grammar</button>
+        <button class="tab-btn" onclick="showSection('summary')">🗺️ Summary</button>
+    </div>
+
+    <div class="content">
+        <!-- VOCABULARY SECTION -->
+        <div id="vocab" class="section active">
+            <div class="section-title">Unit 9: Vocabulary</div>
+            
+            <div class="vocab-box">
+                <h3>9A: Shopping</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">save money for something</span></td><td><strong>save up for</strong></td></tr>
+                    <tr><td><span class="keyword">pay with coins/notes</span></td><td><strong>pay in cash</strong></td></tr>
+                    <tr><td><span class="keyword">keep paper after buying</span></td><td><strong>keep the receipt</strong></td></tr>
+                    <tr><td><span class="keyword">good price / special deal</span></td><td><strong>bargain / special offer</strong></td></tr>
+                    <tr><td><span class="keyword">time when prices are lower</span></td><td><strong>sales</strong></td></tr>
+                    <tr><td><span class="keyword">new product available to buy</span></td><td><strong>go on sale</strong></td></tr>
+                    <tr><td><span class="keyword">heavy items / delivered to home</span></td><td><strong>buy online / delivered</strong></td></tr>
+                    <tr><td><span class="keyword">get money back for return</span></td><td><strong>get a refund</strong></td></tr>
+                    <tr><td><span class="keyword">exchange for different item</span></td><td><strong>exchange it</strong></td></tr>
+                    <tr><td><span class="keyword">stop an order</span></td><td><strong>cancel an order</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 9A-V1</h4>
+                <ol>
+                    <li data-answer="save up for">I always ______ things I want to buy and wait until I have enough money. <span class="option" onclick="checkAnswer(this)">pay in cash</span> <span class="option" onclick="checkAnswer(this)">save up for</span> <span class="option" onclick="checkAnswer(this)">cancel an order</span></li>
+                    <li data-answer="pay in cash">I prefer to ______ and not by credit card. <span class="option" onclick="checkAnswer(this)">get a refund</span> <span class="option" onclick="checkAnswer(this)">save up for</span> <span class="option" onclick="checkAnswer(this)">pay in cash</span></li>
+                    <li data-answer="keep the receipt">I always ______ when I buy something in case I need to take it back. <span class="option" onclick="checkAnswer(this)">cancel an order</span> <span class="option" onclick="checkAnswer(this)">keep the receipt</span> <span class="option" onclick="checkAnswer(this)">go on sale</span></li>
+                    <li data-answer="bargain">I always look for ______ and special offers when I shop. <span class="option" onclick="checkAnswer(this)">sales</span> <span class="option" onclick="checkAnswer(this)">bargain</span> <span class="option" onclick="checkAnswer(this)">refund</span></li>
+                    <li data-answer="sales">I usually wait for the ______ before I buy anything because things are cheaper. <span class="option" onclick="checkAnswer(this)">bargains</span> <span class="option" onclick="checkAnswer(this)">receipts</span> <span class="option" onclick="checkAnswer(this)">sales</span></li>
+                    <li data-answer="goes on sale">I like to replace my phone as soon as a new model ______. <span class="option" onclick="checkAnswer(this)">gets a refund</span> <span class="option" onclick="checkAnswer(this)">goes on sale</span> <span class="option" onclick="checkAnswer(this)">cancels an order</span></li>
+                    <li data-answer="delivered">I usually buy heavy goods online - I don't have to carry them, they're ______ to my home. <span class="option" onclick="checkAnswer(this)">saved up</span> <span class="option" onclick="checkAnswer(this)">exchanged</span> <span class="option" onclick="checkAnswer(this)">delivered</span></li>
+                    <li data-answer="get a refund">I don't like buying clothes online - it often takes a long time to ______ if you return them. <span class="option" onclick="checkAnswer(this)">pay in cash</span> <span class="option" onclick="checkAnswer(this)">get a refund</span> <span class="option" onclick="checkAnswer(this)">save up for</span></li>
+                    <li data-answer="cancel an order">I once had to ______ because the goods didn't arrive on time. <span class="option" onclick="checkAnswer(this)">go on sale</span> <span class="option" onclick="checkAnswer(this)">keep the receipt</span> <span class="option" onclick="checkAnswer(this)">cancel an order</span></li>
+                    <li data-answer="exchange">If you don't like it, you can send it back and ______ it for something else. <span class="option" onclick="checkAnswer(this)">save up</span> <span class="option" onclick="checkAnswer(this)">exchange</span> <span class="option" onclick="checkAnswer(this)">deliver</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans9av1')">Show Answers</button>
+                <div id="ans9av1" class="answers">الإجابات: 1. save up for, 2. pay in cash, 3. keep the receipt, 4. bargain, 5. sales, 6. goes on sale, 7. delivered, 8. get a refund, 9. cancel an order, 10. exchange</div>
+            </div>
+
+            <div class="vocab-box">
+                <h3>9B: Strong and Weak Adjectives</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <table>
+                    <tr><th>Weak Adjective</th><th>Strong Adjective(s)</th></tr>
+                    <tr><td><span class="keyword">angry</span></td><td><strong>furious</strong></td></tr>
+                    <tr><td><span class="keyword">bad</span></td><td><strong>terrible / awful / disgusting</strong></td></tr>
+                    <tr><td><span class="keyword">beautiful</span></td><td><strong>gorgeous / wonderful / spectacular</strong></td></tr>
+                    <tr><td><span class="keyword">big</span></td><td><strong>huge / enormous</strong></td></tr>
+                    <tr><td><span class="keyword">frightened</span></td><td><strong>terrified</strong></td></tr>
+                    <tr><td><span class="keyword">good</span></td><td><strong>excellent / brilliant / great</strong></td></tr>
+                    <tr><td><span class="keyword">happy</span></td><td><strong>thrilled / delighted</strong></td></tr>
+                    <tr><td><span class="keyword">small</span></td><td><strong>tiny</strong></td></tr>
+                    <tr><td><span class="keyword">tired</span></td><td><strong>exhausted</strong></td></tr>
+                    <tr><td><span class="keyword">surprised</span></td><td><strong>shocked</strong></td></tr>
+                    <tr><td><span class="keyword">interesting</span></td><td><strong>fascinating</strong></td></tr>
+                    <tr><td><span class="keyword">old</span></td><td><strong>ancient</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 9B-V1</h4>
+                <ol>
+                    <li data-answer="furious">I was ______ when they cancelled my flight without telling me! <span class="option" onclick="checkAnswer(this)">angry</span> <span class="option" onclick="checkAnswer(this)">happy</span> <span class="option" onclick="checkAnswer(this)">furious</span></li>
+                    <li data-answer="terrible">The food was ______ - I couldn't eat it! <span class="option" onclick="checkAnswer(this)">bad</span> <span class="option" onclick="checkAnswer(this)">terrible</span> <span class="option" onclick="checkAnswer(this)">good</span></li>
+                    <li data-answer="gorgeous">The view from the mountain was absolutely ______! <span class="option" onclick="checkAnswer(this)">beautiful</span> <span class="option" onclick="checkAnswer(this)">ugly</span> <span class="option" onclick="checkAnswer(this)">gorgeous</span></li>
+                    <li data-answer="enormous">The new shopping centre is ______ - it has over 200 shops! <span class="option" onclick="checkAnswer(this)">tiny</span> <span class="option" onclick="checkAnswer(this)">enormous</span> <span class="option" onclick="checkAnswer(this)">big</span></li>
+                    <li data-answer="terrified">I was ______ of heights, so I couldn't go on the rollercoaster. <span class="option" onclick="checkAnswer(this)">brave</span> <span class="option" onclick="checkAnswer(this)">frightened</span> <span class="option" onclick="checkAnswer(this)">terrified</span></li>
+                    <li data-answer="excellent">The service at the hotel was ______ - everyone was so helpful! <span class="option" onclick="checkAnswer(this)">bad</span> <span class="option" onclick="checkAnswer(this)">excellent</span> <span class="option" onclick="checkAnswer(this)">good</span></li>
+                    <li data-answer="thrilled">She was ______ when she got the job offer! <span class="option" onclick="checkAnswer(this)">sad</span> <span class="option" onclick="checkAnswer(this)">thrilled</span> <span class="option" onclick="checkAnswer(this)">happy</span></li>
+                    <li data-answer="tiny">The apartment was so ______ I could barely fit my bed in it! <span class="option" onclick="checkAnswer(this)">huge</span> <span class="option" onclick="checkAnswer(this)">small</span> <span class="option" onclick="checkAnswer(this)">tiny</span></li>
+                    <li data-answer="exhausted">After working 12 hours, I was completely ______. <span class="option" onclick="checkAnswer(this)">energetic</span> <span class="option" onclick="checkAnswer(this)">tired</span> <span class="option" onclick="checkAnswer(this)">exhausted</span></li>
+                    <li data-answer="shocked">I was ______ when I heard the news - I couldn't believe it! <span class="option" onclick="checkAnswer(this)">bored</span> <span class="option" onclick="checkAnswer(this)">surprised</span> <span class="option" onclick="checkAnswer(this)">shocked</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans9bv1')">Show Answers</button>
+                <div id="ans9bv1" class="answers">الإجابات: 1. furious, 2. terrible, 3. gorgeous, 4. enormous, 5. terrified, 6. excellent, 7. thrilled, 8. tiny, 9. exhausted, 10. shocked</div>
+            </div>
+
+            <div class="vocab-box">
+                <h3>9C: Describing Art</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">not showing real things / uses shapes</span></td><td><strong>abstract</strong></td></tr>
+                    <tr><td><span class="keyword">very bad quality</span></td><td><strong>awful / terrible</strong></td></tr>
+                    <tr><td><span class="keyword">happy / cheerful feeling</span></td><td><strong>cheerful</strong></td></tr>
+                    <tr><td><span class="keyword">many bright colours</span></td><td><strong>colourful</strong></td></tr>
+                    <tr><td><span class="keyword">showing imagination / new ideas</span></td><td><strong>creative / original</strong></td></tr>
+                    <tr><td><span class="keyword">very interesting / captivating</span></td><td><strong>fascinating</strong></td></tr>
+                    <tr><td><span class="keyword">old style / not modern</span></td><td><strong>old-fashioned / traditional</strong></td></tr>
+                    <tr><td><span class="keyword">showing strong emotion / impact</span></td><td><strong>powerful</strong></td></tr>
+                    <tr><td><span class="keyword">showing things as they really are</span></td><td><strong>realistic</strong></td></tr>
+                    <tr><td><span class="keyword">very impressive / amazing</span></td><td><strong>spectacular</strong></td></tr>
+                    <tr><td><span class="keyword">strange / unusual</span></td><td><strong>weird</strong></td></tr>
+                    <tr><td><span class="keyword">art made from stone/metal/wood</span></td><td><strong>sculpture</strong></td></tr>
+                    <tr><td><span class="keyword">art in public places</span></td><td><strong>public art</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 9C-V1</h4>
+                <ol>
+                    <li data-answer="abstract">Some people find modern art hard to understand because it's ______. <span class="option" onclick="checkAnswer(this)">traditional</span> <span class="option" onclick="checkAnswer(this)">abstract</span> <span class="option" onclick="checkAnswer(this)">realistic</span></li>
+                    <li data-answer="creative">Picasso painted in many different styles. He was a very ______ artist. <span class="option" onclick="checkAnswer(this)">silly</span> <span class="option" onclick="checkAnswer(this)">creative</span> <span class="option" onclick="checkAnswer(this)">unoriginal</span></li>
+                    <li data-answer="ugly">Many people think his paintings are amazing, but I just find them ______. <span class="option" onclick="checkAnswer(this)">spectacular</span> <span class="option" onclick="checkAnswer(this)">beautiful</span> <span class="option" onclick="checkAnswer(this)">ugly</span></li>
+                    <li data-answer="weird">That artwork is just really ______. I've no idea what it's supposed to mean. <span class="option" onclick="checkAnswer(this)">realistic</span> <span class="option" onclick="checkAnswer(this)">weird</span> <span class="option" onclick="checkAnswer(this)">traditional</span></li>
+                    <li data-answer="original">It's important for modern art to be ______. It's not exactly a new idea, is it? <span class="option" onclick="checkAnswer(this)">awful</span> <span class="option" onclick="checkAnswer(this)">original</span> <span class="option" onclick="checkAnswer(this)">unoriginal</span></li>
+                    <li data-answer="powerful">Her work is very ______ - lots of people cry when they see it for the first time. <span class="option" onclick="checkAnswer(this)">silly</span> <span class="option" onclick="checkAnswer(this)">cheerful</span> <span class="option" onclick="checkAnswer(this)">powerful</span></li>
+                    <li data-answer="spectacular">The recent exhibition at the Modern Art Museum was a ______ success. <span class="option" onclick="checkAnswer(this)">old-fashioned</span> <span class="option" onclick="checkAnswer(this)">awful</span> <span class="option" onclick="checkAnswer(this)">spectacular</span></li>
+                    <li data-answer="sculpture">A ______ is a piece of art that is made from stone, metal, wood, etc. <span class="option" onclick="checkAnswer(this)">abstract art</span> <span class="option" onclick="checkAnswer(this)">sculpture</span> <span class="option" onclick="checkAnswer(this)">public art</span></li>
+                    <li data-answer="Public art">______ is in a place where everyone can see it and enjoy it, usually outside. <span class="option" onclick="checkAnswer(this)">Realistic art</span> <span class="option" onclick="checkAnswer(this)">Public art</span> <span class="option" onclick="checkAnswer(this)">Sculpture</span></li>
+                    <li data-answer="realistic">______ art shows people, places or things as they really are. <span class="option" onclick="checkAnswer(this)">Weird</span> <span class="option" onclick="checkAnswer(this)">Abstract</span> <span class="option" onclick="checkAnswer(this)">Realistic</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans9cv1')">Show Answers</button>
+                <div id="ans9cv1" class="answers">الإجابات: 1. abstract, 2. creative, 3. ugly, 4. weird, 5. original, 6. powerful, 7. spectacular, 8. sculpture, 9. Public art, 10. realistic</div>
+            </div>
+
+            <div class="section-title">Unit 10: Vocabulary</div>
+            
+            <div class="vocab-box">
+                <h3>10A: Education</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">school for ages 5-11</span></td><td><strong>primary school</strong></td></tr>
+                    <tr><td><span class="keyword">school for ages 11-16/18</span></td><td><strong>secondary school</strong></td></tr>
+                    <tr><td><span class="keyword">school you live in</span></td><td><strong>boarding school</strong></td></tr>
+                    <tr><td><span class="keyword">school paid by government</span></td><td><strong>state school</strong></td></tr>
+                    <tr><td><span class="keyword">school you pay fees for</span></td><td><strong>private school</strong></td></tr>
+                    <tr><td><span class="keyword">money you pay for education</span></td><td><strong>fees</strong></td></tr>
+                    <tr><td><span class="keyword">exam results / marks</span></td><td><strong>grades</strong></td></tr>
+                    <tr><td><span class="keyword">succeed in an exam</span></td><td><strong>pass (an exam)</strong></td></tr>
+                    <tr><td><span class="keyword">take / sit an exam</span></td><td><strong>take (an exam)</strong></td></tr>
+                    <tr><td><span class="keyword">subjects you study</span></td><td><strong>subjects</strong></td></tr>
+                    <tr><td><span class="keyword">certificate proving you studied</span></td><td><strong>qualifications</strong></td></tr>
+                    <tr><td><span class="keyword">higher education institution</span></td><td><strong>university</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 10A-V1</h4>
+                <ol>
+                    <li data-answer="primary">In the UK, you go to ______ school from 5 to 11. <span class="option" onclick="checkAnswer(this)">boarding</span> <span class="option" onclick="checkAnswer(this)">secondary</span> <span class="option" onclick="checkAnswer(this)">primary</span></li>
+                    <li data-answer="secondary">Then you go to ______ school until you're 16 or 18. <span class="option" onclick="checkAnswer(this)">private</span> <span class="option" onclick="checkAnswer(this)">secondary</span> <span class="option" onclick="checkAnswer(this)">primary</span></li>
+                    <li data-answer="university">About a third of 18-year-olds go to ______ to study for a degree. <span class="option" onclick="checkAnswer(this)">primary school</span> <span class="option" onclick="checkAnswer(this)">university</span> <span class="option" onclick="checkAnswer(this)">boarding school</span></li>
+                    <li data-answer="state">Over 90 percent of children in the UK go to a ______ school. <span class="option" onclick="checkAnswer(this)">boarding</span> <span class="option" onclick="checkAnswer(this)">private</span> <span class="option" onclick="checkAnswer(this)">state</span></li>
+                    <li data-answer="private">A small number go to a ______ school, where you pay fees. <span class="option" onclick="checkAnswer(this)">secondary</span> <span class="option" onclick="checkAnswer(this)">state</span> <span class="option" onclick="checkAnswer(this)">private</span></li>
+                    <li data-answer="take">Students ______ important exams called GCSEs when they are 16. <span class="option" onclick="checkAnswer(this)">attend</span> <span class="option" onclick="checkAnswer(this)">pass</span> <span class="option" onclick="checkAnswer(this)">take</span></li>
+                    <li data-answer="grades">If they get good ______, they take their A levels. <span class="option" onclick="checkAnswer(this)">subjects</span> <span class="option" onclick="checkAnswer(this)">fees</span> <span class="option" onclick="checkAnswer(this)">grades</span></li>
+                    <li data-answer="pass">If they ______ their A level exams with good grades, they can go to university. <span class="option" onclick="checkAnswer(this)">attend</span> <span class="option" onclick="checkAnswer(this)">take</span> <span class="option" onclick="checkAnswer(this)">pass</span></li>
+                    <li data-answer="subjects">Students usually study up to ten different ______ for GCSE. <span class="option" onclick="checkAnswer(this)">fees</span> <span class="option" onclick="checkAnswer(this)">qualifications</span> <span class="option" onclick="checkAnswer(this)">subjects</span></li>
+                    <li data-answer="qualifications">After university, you get ______ that prove you studied. <span class="option" onclick="checkAnswer(this)">fees</span> <span class="option" onclick="checkAnswer(this)">grades</span> <span class="option" onclick="checkAnswer(this)">qualifications</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans10av1')">Show Answers</button>
+                <div id="ans10av1" class="answers">الإجابات: 1. primary, 2. secondary, 3. university, 4. state, 5. private, 6. take, 7. grades, 8. pass, 9. subjects, 10. qualifications</div>
+            </div>
+
+            <div class="vocab-box">
+                <h3>10B: Suggestions and Improvements</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">convince someone to do something</span></td><td><strong>persuade</strong></td></tr>
+                    <tr><td><span class="keyword">tell someone not to do something dangerous</span></td><td><strong>warn</strong></td></tr>
+                    <tr><td><span class="keyword">say you will definitely do something</span></td><td><strong>promise</strong></td></tr>
+                    <tr><td><span class="keyword">say no to a request</span></td><td><strong>refuse</strong></td></tr>
+                    <tr><td><span class="keyword">motivate someone to do something</span></td><td><strong>encourage</strong></td></tr>
+                    <tr><td><span class="keyword">advise / suggest as a good idea</span></td><td><strong>recommend / suggest</strong></td></tr>
+                    <tr><td><span class="keyword">think about doing something</span></td><td><strong>consider</strong></td></tr>
+                    <tr><td><span class="keyword">stop doing / using something</span></td><td><strong>avoid</strong></td></tr>
+                    <tr><td><span class="keyword">begin doing something</span></td><td><strong>start</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 10B-V1</h4>
+                <ol>
+                    <li data-answer="persuaded">She ______ me to use my bicycle by telling me how much weight I'd lose. <span class="option" onclick="checkAnswer(this)">refused</span> <span class="option" onclick="checkAnswer(this)">warned</span> <span class="option" onclick="checkAnswer(this)">persuaded</span></li>
+                    <li data-answer="start">People ______ complaining when you tell them to stop using their cars. <span class="option" onclick="checkAnswer(this)">promise</span> <span class="option" onclick="checkAnswer(this)">avoid</span> <span class="option" onclick="checkAnswer(this)">start</span></li>
+                    <li data-answer="refuse">You should ______ to go if they don't pay for your travel expenses. <span class="option" onclick="checkAnswer(this)">persuade</span> <span class="option" onclick="checkAnswer(this)">refuse</span> <span class="option" onclick="checkAnswer(this)">promise</span></li>
+                    <li data-answer="promise">I ______ to leave the car at home next week. I'll cycle to work instead. <span class="option" onclick="checkAnswer(this)">warn</span> <span class="option" onclick="checkAnswer(this)">refuse</span> <span class="option" onclick="checkAnswer(this)">promise</span></li>
+                    <li data-answer="encourage">We should ______ people to walk to work. <span class="option" onclick="checkAnswer(this)">avoid</span> <span class="option" onclick="checkAnswer(this)">warn</span> <span class="option" onclick="checkAnswer(this)">encourage</span></li>
+                    <li data-answer="warned">Several people have ______ us not to cycle on the busy main road. <span class="option" onclick="checkAnswer(this)">recommended</span> <span class="option" onclick="checkAnswer(this)">persuaded</span> <span class="option" onclick="checkAnswer(this)">warned</span></li>
+                    <li data-answer="considering">I'm ______ selling my car and buying a motorbike. <span class="option" onclick="checkAnswer(this)">avoiding</span> <span class="option" onclick="checkAnswer(this)">recommending</span> <span class="option" onclick="checkAnswer(this)">considering</span></li>
+                    <li data-answer="avoid">You should ______ travelling at that time, unless you really need to. <span class="option" onclick="checkAnswer(this)">promise</span> <span class="option" onclick="checkAnswer(this)">start</span> <span class="option" onclick="checkAnswer(this)">avoid</span></li>
+                    <li data-answer="recommend">If you want to be greener, I'd ______ using public transport. <span class="option" onclick="checkAnswer(this)">warn</span> <span class="option" onclick="checkAnswer(this)">avoid</span> <span class="option" onclick="checkAnswer(this)">recommend</span></li>
+                    <li data-answer="advise">I'd ______ you to think about how often you really need to use your car. <span class="option" onclick="checkAnswer(this)">refuse</span> <span class="option" onclick="checkAnswer(this)">warn</span> <span class="option" onclick="checkAnswer(this)">advise</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans10bv1')">Show Answers</button>
+                <div id="ans10bv1" class="answers">الإجابات: 1. persuaded, 2. start, 3. refuse, 4. promise, 5. encourage, 6. warned, 7. considering, 8. avoid, 9. recommend, 10. advise</div>
+            </div>
+
+            <div class="vocab-box">
+                <h3>10C: Work Activities</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">organise meetings / interviews</span></td><td><strong>arrange</strong></td></tr>
+                    <tr><td><span class="keyword">collect information / data</span></td><td><strong>do research</strong></td></tr>
+                    <tr><td><span class="keyword">hire people for jobs</span></td><td><strong>employ people</strong></td></tr>
+                    <tr><td><span class="keyword">talk to people about ideas / results</span></td><td><strong>give presentations</strong></td></tr>
+                    <tr><td><span class="keyword">ask questions to candidates</span></td><td><strong>interview people</strong></td></tr>
+                    <tr><td><span class="keyword">be responsible for projects / staff</span></td><td><strong>manage</strong></td></tr>
+                    <tr><td><span class="keyword">offer a job to someone</span></td><td><strong>offer someone a job</strong></td></tr>
+                    <tr><td><span class="keyword">help customers in a shop</span></td><td><strong>serve customers</strong></td></tr>
+                    <tr><td><span class="keyword">organise meetings in advance</span></td><td><strong>set up meetings</strong></td></tr>
+                    <tr><td><span class="keyword">write documents with details</span></td><td><strong>write reports</strong></td></tr>
+                    <tr><td><span class="keyword">collaborate with colleagues</span></td><td><strong>work in a team</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 10C-V1</h4>
+                <ol>
+                    <li data-answer="do research">In my job as a market researcher, I ______ for my company. <span class="option" onclick="checkAnswer(this)">serve customers</span> <span class="option" onclick="checkAnswer(this)">set up meetings</span> <span class="option" onclick="checkAnswer(this)">do research</span></li>
+                    <li data-answer="interview people">I often ______ on the phone to collect data. <span class="option" onclick="checkAnswer(this)">manage projects</span> <span class="option" onclick="checkAnswer(this)">interview people</span> <span class="option" onclick="checkAnswer(this)">employ people</span></li>
+                    <li data-answer="write reports">Then I have to ______ with all the details of my research. <span class="option" onclick="checkAnswer(this)">arrange interviews</span> <span class="option" onclick="checkAnswer(this)">serve customers</span> <span class="option" onclick="checkAnswer(this)">write reports</span></li>
+                    <li data-answer="give presentations">Sometimes I ______ to tell people about my results. <span class="option" onclick="checkAnswer(this)">interview people</span> <span class="option" onclick="checkAnswer(this)">do research</span> <span class="option" onclick="checkAnswer(this)">give presentations</span></li>
+                    <li data-answer="arrange interviews">As an HR officer, I ______ for jobs. <span class="option" onclick="checkAnswer(this)">serve customers</span> <span class="option" onclick="checkAnswer(this)">write reports</span> <span class="option" onclick="checkAnswer(this)">arrange interviews</span></li>
+                    <li data-answer="offer them the job">If candidates are good, I ______. <span class="option" onclick="checkAnswer(this)">give presentations</span> <span class="option" onclick="checkAnswer(this)">employ people</span> <span class="option" onclick="checkAnswer(this)">offer them the job</span></li>
+                    <li data-answer="employs">If they accept the job, the company then ______ them. <span class="option" onclick="checkAnswer(this)">serves</span> <span class="option" onclick="checkAnswer(this)">manages</span> <span class="option" onclick="checkAnswer(this)">employs</span></li>
+                    <li data-answer="set up meetings">As an office manager, I ______ - I organise them and make sure everyone knows about them. <span class="option" onclick="checkAnswer(this)">serve customers</span> <span class="option" onclick="checkAnswer(this)">write reports</span> <span class="option" onclick="checkAnswer(this)">set up meetings</span></li>
+                    <li data-answer="managing projects">As a project manager, I'm responsible for ______. <span class="option" onclick="checkAnswer(this)">serving customers</span> <span class="option" onclick="checkAnswer(this)">employing people</span> <span class="option" onclick="checkAnswer(this)">managing projects</span></li>
+                    <li data-answer="work with the team">I ______ to get the project done and make sure everything runs smoothly. <span class="option" onclick="checkAnswer(this)">arrange interviews</span> <span class="option" onclick="checkAnswer(this)">give presentations</span> <span class="option" onclick="checkAnswer(this)">work with the team</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans10cv1')">Show Answers</button>
+                <div id="ans10cv1" class="answers">الإجابات: 1. do research, 2. interview people, 3. write reports, 4. give presentations, 5. arrange interviews, 6. offer them the job, 7. employs, 8. set up meetings, 9. managing projects, 10. work with the team</div>
+            </div>
+        </div>
+
+        <!-- GRAMMAR SECTION -->
+        <div id="grammar" class="section">
+            <div class="section-title">Unit 9: Grammar</div>
+            
+            <div class="grammar-box">
+                <h3>9A: The Passive - All Tenses</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <div class="arabic-grammar-note">
+                    ملاحظة عربية: إذا وجدت تصريف ثالث (<span class="eng-term">past participle</span>) مسبوقًا بـ <span class="eng-term">verb to be</span> (<span class="eng-term">am/is/are/was/were/been/being</span>)، فهذه الجملة تكون <span class="eng-term">passive</span>. وهذا أهم ما يميز الـ <span class="eng-term">passive</span>.
+                </div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">is/are + ______ (present simple passive)</span></td><td><strong>past participle</strong></td></tr>
+                    <tr><td><span class="keyword">is/are being + ______ (present continuous passive)</span></td><td><strong>past participle</strong></td></tr>
+                    <tr><td><span class="keyword">has/have been + ______ (present perfect passive)</span></td><td><strong>past participle</strong></td></tr>
+                    <tr><td><span class="keyword">was/were + ______ (past simple passive)</span></td><td><strong>past participle</strong></td></tr>
+                    <tr><td><span class="keyword">will be + ______ (future passive)</span></td><td><strong>past participle</strong></td></tr>
+                    <tr><td><span class="keyword">modal + be + ______ (modal passive)</span></td><td><strong>past participle</strong></td></tr>
+                    <tr><td><span class="keyword">+ ______ + agent</span></td><td><strong>by</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 9A-G1</h4>
+                <ol>
+                    <li data-answer="has been changed">The way we shop today ______ by technology. <span class="option" onclick="checkAnswer(this)">is changing</span> <span class="option" onclick="checkAnswer(this)">has been changed</span> <span class="option" onclick="checkAnswer(this)">changed</span></li>
+                    <li data-answer="will be done">Soon most of our shopping ______ online. <span class="option" onclick="checkAnswer(this)">will be done</span> <span class="option" onclick="checkAnswer(this)">is done</span> <span class="option" onclick="checkAnswer(this)">will do</span></li>
+                    <li data-answer="have already lost">Many people ______ their jobs in shops. <span class="option" onclick="checkAnswer(this)">are already losing</span> <span class="option" onclick="checkAnswer(this)">already lose</span> <span class="option" onclick="checkAnswer(this)">have already lost</span></li>
+                    <li data-answer="must still be solved">Some problems ______ by online businesses. <span class="option" onclick="checkAnswer(this)">must still be solved</span> <span class="option" onclick="checkAnswer(this)">are still solving</span> <span class="option" onclick="checkAnswer(this)">must still solve</span></li>
+                    <li data-answer="are often returned">Clothes ______ by online customers because they don't fit. <span class="option" onclick="checkAnswer(this)">often return</span> <span class="option" onclick="checkAnswer(this)">have often returned</span> <span class="option" onclick="checkAnswer(this)">are often returned</span></li>
+                    <li data-answer="is being developed">New software ______ to help customers get the right size. <span class="option" onclick="checkAnswer(this)">is being developed</span> <span class="option" onclick="checkAnswer(this)">has developed</span> <span class="option" onclick="checkAnswer(this)">is developing</span></li>
+                    <li data-answer="may soon be delivered">Small parcels ______ by remote-controlled drones. <span class="option" onclick="checkAnswer(this)">are soon delivering</span> <span class="option" onclick="checkAnswer(this)">may soon deliver</span> <span class="option" onclick="checkAnswer(this)">may soon be delivered</span></li>
+                    <li data-answer="has already been tested">This technology ______ in the US. <span class="option" onclick="checkAnswer(this)">has already been tested</span> <span class="option" onclick="checkAnswer(this)">is already testing</span> <span class="option" onclick="checkAnswer(this)">has already tested</span></li>
+                    <li data-answer="have always been bought and sold">Goods ______ in high street shops. <span class="option" onclick="checkAnswer(this)">are always buying and selling</span> <span class="option" onclick="checkAnswer(this)">have always bought and sold</span> <span class="option" onclick="checkAnswer(this)">have always been bought and sold</span></li>
+                    <li data-answer="will be bought and paid for">In the future, products ______ online. <span class="option" onclick="checkAnswer(this)">will be bought and paid for</span> <span class="option" onclick="checkAnswer(this)">are buying and paying for</span> <span class="option" onclick="checkAnswer(this)">will buy and pay for</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans9ag1')">Show Answers</button>
+                <div id="ans9ag1" class="answers">الإجابات: 1. has been changed, 2. will be done, 3. have already lost, 4. must still be solved, 5. are often returned, 6. is being developed, 7. may soon be delivered, 8. has already been tested, 9. have always been bought and sold, 10. will be bought and paid for</div>
+            </div>
+
+            <div class="grammar-box">
+                <h3>9B: Third Conditional</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <div class="arabic-grammar-note">
+                    ملاحظة عربية: إذا وجدت <span class="eng-term">if + past perfect</span> (<span class="eng-term">had + V3</span>) في الجملة الشرطية، فالجملة الرئيسية تكون <span class="eng-term">would/could/might + have + V3</span>. هذا هو الشرط الثالث (<span class="eng-term">Third Conditional</span>) ويُستخدم للتحدث عن مواقف خيالية في الماضي.
+                </div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">if + ______ + would have + past participle</span></td><td><strong>past perfect</strong></td></tr>
+                    <tr><td><span class="keyword">imaginary past situation</span></td><td><strong>third conditional</strong></td></tr>
+                    <tr><td><span class="keyword">expressing regret about the past</span></td><td><strong>third conditional</strong></td></tr>
+                    <tr><td><span class="keyword">could/might have + past participle</span></td><td><strong>less certain result</strong></td></tr>
+                    <tr><td><span class="keyword">If I ______ you (past)</span></td><td><strong>had been</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 9B-G1</h4>
+                <ol>
+                    <li data-answer="had taken">If she ______ the job, she would have moved to London. <span class="option" onclick="checkAnswer(this)">had taken</span> <span class="option" onclick="checkAnswer(this)">took</span> <span class="option" onclick="checkAnswer(this)">has taken</span></li>
+                    <li data-answer="hadn't read">If they ______ the advertisement, they wouldn't have known about the opportunities abroad. <span class="option" onclick="checkAnswer(this)">didn't read</span> <span class="option" onclick="checkAnswer(this)">hadn't read</span> <span class="option" onclick="checkAnswer(this)">haven't read</span></li>
+                    <li data-answer="wouldn't have met">If I hadn't gone to Turkey, I ______ Andy. <span class="option" onclick="checkAnswer(this)">wouldn't have met</span> <span class="option" onclick="checkAnswer(this)">wouldn't meet</span> <span class="option" onclick="checkAnswer(this)">didn't meet</span></li>
+                    <li data-answer="might have become">I ______ a scientist if I'd been better at science at school. <span class="option" onclick="checkAnswer(this)">might become</span> <span class="option" onclick="checkAnswer(this)">might have become</span> <span class="option" onclick="checkAnswer(this)">might be becoming</span></li>
+                    <li data-answer="had asked">I'd have told you what happened if you ______ me. <span class="option" onclick="checkAnswer(this)">had asked</span> <span class="option" onclick="checkAnswer(this)">asked</span> <span class="option" onclick="checkAnswer(this)">have asked</span></li>
+                    <li data-answer="wouldn't have overslept">If Robert hadn't gone to bed late last night, he ______. <span class="option" onclick="checkAnswer(this)">wouldn't oversleep</span> <span class="option" onclick="checkAnswer(this)">wouldn't have overslept</span> <span class="option" onclick="checkAnswer(this)">didn't oversleep</span></li>
+                    <li data-answer="wouldn't have decided">If Alexa hadn't gone to a piano concert, she ______ to learn the piano. <span class="option" onclick="checkAnswer(this)">wouldn't have decided</span> <span class="option" onclick="checkAnswer(this)">wouldn't decide</span> <span class="option" onclick="checkAnswer(this)">didn't decide</span></li>
+                    <li data-answer="wouldn't have failed">If Bonny had revised for her exams, she ______ them all. <span class="option" onclick="checkAnswer(this)">wouldn't fail</span> <span class="option" onclick="checkAnswer(this)">wouldn't have failed</span> <span class="option" onclick="checkAnswer(this)">didn't fail</span></li>
+                    <li data-answer="would have got">If Bonny hadn't failed her exams, she ______ into university. <span class="option" onclick="checkAnswer(this)">would have got</span> <span class="option" onclick="checkAnswer(this)">would get</span> <span class="option" onclick="checkAnswer(this)">got</span></li>
+                    <li data-answer="wouldn't have started">If Bonny had got into university, she ______ her own company. <span class="option" onclick="checkAnswer(this)">wouldn't start</span> <span class="option" onclick="checkAnswer(this)">wouldn't have started</span> <span class="option" onclick="checkAnswer(this)">didn't start</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans9bg1')">Show Answers</button>
+                <div id="ans9bg1" class="answers">الإجابات: 1. had taken, 2. hadn't read, 3. wouldn't have met, 4. might have become, 5. had asked, 6. wouldn't have overslept, 7. wouldn't have decided, 8. wouldn't have failed, 9. would have got, 10. wouldn't have started</div>
+            </div>
+
+            <div class="grammar-box">
+                <h3>9C: Short Responses with so, neither/nor, too/either</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <div class="arabic-grammar-note">
+                    ملاحظة عربية: للموافقة على جملة مثبتة: <span class="eng-term">so + auxiliary + subject</span> أو <span class="eng-term">subject + auxiliary + too</span>. للموافقة على جملة منفية: <span class="eng-term">neither/nor + auxiliary + subject</span> أو <span class="eng-term">subject + negative auxiliary + either</span>.
+                </div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">positive statement + agree</span></td><td><strong>so + auxiliary + subject</strong> / <strong>subject + auxiliary + too</strong></td></tr>
+                    <tr><td><span class="keyword">negative statement + agree</span></td><td><strong>neither/nor + auxiliary + subject</strong> / <strong>subject + negative auxiliary + either</strong></td></tr>
+                    <tr><td><span class="keyword">positive statement + disagree</span></td><td><strong>subject + negative auxiliary</strong></td></tr>
+                    <tr><td><span class="keyword">negative statement + disagree</span></td><td><strong>subject + positive auxiliary</strong></td></tr>
+                    <tr><td><span class="keyword">I love it → agree</span></td><td><strong>So do I / I do too</strong></td></tr>
+                    <tr><td><span class="keyword">I don't like it → agree</span></td><td><strong>Neither do I / I don't either</strong></td></tr>
+                    <tr><td><span class="keyword">I love it → disagree</span></td><td><strong>I don't</strong></td></tr>
+                    <tr><td><span class="keyword">I don't like it → disagree</span></td><td><strong>I do</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 9C-G1</h4>
+                <ol>
+                    <li data-answer="So was I">A: I was good at art when I was at school. B: ______. <span class="option" onclick="checkAnswer(this)">So was I</span> <span class="option" onclick="checkAnswer(this)">I wasn't either</span> <span class="option" onclick="checkAnswer(this)">Neither was I</span></li>
+                    <li data-answer="didn't">A: I wanted to study art at college. B: I ______. I hated art at school. <span class="option" onclick="checkAnswer(this)">was</span> <span class="option" onclick="checkAnswer(this)">didn't</span> <span class="option" onclick="checkAnswer(this)">did</span></li>
+                    <li data-answer="do">A: I don't like abstract art. B: Neither ______ I. I think it's all really strange. <span class="option" onclick="checkAnswer(this)">do</span> <span class="option" onclick="checkAnswer(this)">am</span> <span class="option" onclick="checkAnswer(this)">don't</span></li>
+                    <li data-answer="would">A: I'd love to visit the Louvre in Paris. B: So ______ I. It'd be amazing. <span class="option" onclick="checkAnswer(this)">do</span> <span class="option" onclick="checkAnswer(this)">would</span> <span class="option" onclick="checkAnswer(this)">will</span></li>
+                    <li data-answer="don't">A: I'm a big fan of the Spanish artist Dali. B: Really? I ______. I don't understand why people like his work. <span class="option" onclick="checkAnswer(this)">don't</span> <span class="option" onclick="checkAnswer(this)">am not</span> <span class="option" onclick="checkAnswer(this)">am</span></li>
+                    <li data-answer="do">A: I like art which sends a positive message. B: So ______ I. <span class="option" onclick="checkAnswer(this)">am</span> <span class="option" onclick="checkAnswer(this)">do</span> <span class="option" onclick="checkAnswer(this)">did</span></li>
+                    <li data-answer="do">A: I don't go to see art exhibitions very often. B: I ______. I go every week. <span class="option" onclick="checkAnswer(this)">do</span> <span class="option" onclick="checkAnswer(this)">am</span> <span class="option" onclick="checkAnswer(this)">don't</span></li>
+                    <li data-answer="can't">A: Sometimes I can't understand what an artist is trying to say. B: Neither ______ I sometimes! <span class="option" onclick="checkAnswer(this)">do</span> <span class="option" onclick="checkAnswer(this)">can't</span> <span class="option" onclick="checkAnswer(this)">can</span></li>
+                    <li data-answer="So have I">A: I've never been to Paris. B: ______. I went there two years ago. <span class="option" onclick="checkAnswer(this)">So have I</span> <span class="option" onclick="checkAnswer(this)">I haven't either</span> <span class="option" onclick="checkAnswer(this)">Neither have I</span></li>
+                    <li data-answer="can">A: I can't play a musical instrument. B: ______. I play the guitar and a bit of drums. <span class="option" onclick="checkAnswer(this)">do</span> <span class="option" onclick="checkAnswer(this)">can</span> <span class="option" onclick="checkAnswer(this)">can't</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans9cg1')">Show Answers</button>
+                <div id="ans9cg1" class="answers">الإجابات: 1. So was I, 2. didn't, 3. do, 4. would, 5. don't, 6. do, 7. do, 8. can't, 9. So have I, 10. can</div>
+            </div>
+
+            <div class="section-title">Unit 10: Grammar</div>
+            
+            <div class="grammar-box">
+                <h3>10A: Reported Statements</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <div class="arabic-grammar-note">
+                    ملاحظة عربية: عند تحويل الكلام المباشر إلى غير مباشر (<span class="eng-term">Reported Speech</span>)، نرجع الزمن خطوة للوراء: <span class="eng-term">present simple → past simple</span>, <span class="eng-term">will → would</span>, <span class="eng-term">can → could</span>, etc.
+                </div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">present simple → ______</span></td><td><strong>past simple</strong></td></tr>
+                    <tr><td><span class="keyword">present continuous → ______</span></td><td><strong>past continuous</strong></td></tr>
+                    <tr><td><span class="keyword">past simple → ______</span></td><td><strong>past perfect</strong></td></tr>
+                    <tr><td><span class="keyword">present perfect → ______</span></td><td><strong>past perfect</strong></td></tr>
+                    <tr><td><span class="keyword">will → ______</span></td><td><strong>would</strong></td></tr>
+                    <tr><td><span class="keyword">can → ______</span></td><td><strong>could</strong></td></tr>
+                    <tr><td><span class="keyword">I → ______ / we → ______</span></td><td><strong>he/she / they</strong></td></tr>
+                    <tr><td><span class="keyword">say/tell + ______ + that</span></td><td><strong>object (me/us/him)</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 10A-G1</h4>
+                <ol>
+                    <li data-answer="was">She said she ______ a teacher and that she worked in a language school. <span class="option" onclick="checkAnswer(this)">was</span> <span class="option" onclick="checkAnswer(this)">has been</span> <span class="option" onclick="checkAnswer(this)">is</span></li>
+                    <li data-answer="had been">She told us that she ______ been a teacher for over ten years. <span class="option" onclick="checkAnswer(this)">was</span> <span class="option" onclick="checkAnswer(this)">has</span> <span class="option" onclick="checkAnswer(this)">had</span></li>
+                    <li data-answer="loved">She said she really ______ teaching. <span class="option" onclick="checkAnswer(this)">loved</span> <span class="option" onclick="checkAnswer(this)">has loved</span> <span class="option" onclick="checkAnswer(this)">loves</span></li>
+                    <li data-answer="liked">She said that what she ______ most about her job was meeting people. <span class="option" onclick="checkAnswer(this)">has liked</span> <span class="option" onclick="checkAnswer(this)">likes</span> <span class="option" onclick="checkAnswer(this)">liked</span></li>
+                    <li data-answer="was">She said she ______ really interested in languages. <span class="option" onclick="checkAnswer(this)">was</span> <span class="option" onclick="checkAnswer(this)">has been</span> <span class="option" onclick="checkAnswer(this)">is</span></li>
+                    <li data-answer="spoke">She said that she ______ French and Spanish. <span class="option" onclick="checkAnswer(this)">has spoken</span> <span class="option" onclick="checkAnswer(this)">speaks</span> <span class="option" onclick="checkAnswer(this)">spoke</span></li>
+                    <li data-answer="weren't">A lot of people told us they ______ not ______ very well at school. <span class="option" onclick="checkAnswer(this)">weren't / doing</span> <span class="option" onclick="checkAnswer(this)">haven't / done</span> <span class="option" onclick="checkAnswer(this)">aren't / doing</span></li>
+                    <li data-answer="didn't like">They said they ______ some of the subjects very much. <span class="option" onclick="checkAnswer(this)">haven't liked</span> <span class="option" onclick="checkAnswer(this)">don't like</span> <span class="option" onclick="checkAnswer(this)">didn't like</span></li>
+                    <li data-answer="is">Scientists have said that this ______ normal. <span class="option" onclick="checkAnswer(this)">is</span> <span class="option" onclick="checkAnswer(this)">has been</span> <span class="option" onclick="checkAnswer(this)">was</span></li>
+                    <li data-answer="work">They said that students ______ hard if they enjoy what they are learning. <span class="option" onclick="checkAnswer(this)">have worked</span> <span class="option" onclick="checkAnswer(this)">worked</span> <span class="option" onclick="checkAnswer(this)">work</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans10ag1')">Show Answers</button>
+                <div id="ans10ag1" class="answers">الإجابات: 1. was, 2. had been, 3. loved, 4. liked, 5. was, 6. spoke, 7. weren't / doing, 8. didn't like, 9. is, 10. work</div>
+            </div>
+
+            <div class="grammar-box">
+                <h3>10B: Verb Patterns</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <div class="arabic-grammar-note">
+                    ملاحظة عربية: بعض الأفعال يتبعها <span class="eng-term">verb-ing</span> مثل: <span class="eng-term">consider, recommend, suggest, avoid</span>. وبعضها يتبعها <span class="eng-term">to + infinitive</span> مثل: <span class="eng-term">promise, refuse, agree, decide</span>. وبعضها يحتاج مفعول قبل <span class="eng-term">to + infinitive</span> مثل: <span class="eng-term">encourage, persuade, warn</span>.
+                </div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">consider / recommend / suggest / avoid + ______</span></td><td><strong>verb-ing</strong></td></tr>
+                    <tr><td><span class="keyword">promise / refuse / agree / decide + ______</span></td><td><strong>to + infinitive</strong></td></tr>
+                    <tr><td><span class="keyword">encourage / persuade / warn + object + ______</span></td><td><strong>to + infinitive</strong></td></tr>
+                    <tr><td><span class="keyword">make negative: put ______ before verb-ing/to</span></td><td><strong>not</strong></td></tr>
+                    <tr><td><span class="keyword">start + ______ (both possible)</span></td><td><strong>verb-ing / to + infinitive</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 10B-G1</h4>
+                <ol>
+                    <li data-answer="travelling">He suggested ______ to work on foot. <span class="option" onclick="checkAnswer(this)">travelling</span> <span class="option" onclick="checkAnswer(this)">travel</span> <span class="option" onclick="checkAnswer(this)">to travel</span></li>
+                    <li data-answer="to walk">We should encourage people ______ or cycle instead of using their cars. <span class="option" onclick="checkAnswer(this)">walk</span> <span class="option" onclick="checkAnswer(this)">to walk</span> <span class="option" onclick="checkAnswer(this)">walking</span></li>
+                    <li data-answer="to give up">A lot of people refuse ______ their cars and use public transport. <span class="option" onclick="checkAnswer(this)">to give up</span> <span class="option" onclick="checkAnswer(this)">give up</span> <span class="option" onclick="checkAnswer(this)">giving up</span></li>
+                    <li data-answer="replacing">I recommend ______ buses with trams. <span class="option" onclick="checkAnswer(this)">replace</span> <span class="option" onclick="checkAnswer(this)">replacing</span> <span class="option" onclick="checkAnswer(this)">to replace</span></li>
+                    <li data-answer="not to increase">The government must promise ______ train fares. <span class="option" onclick="checkAnswer(this)">not to increase</span> <span class="option" onclick="checkAnswer(this)">to not increase</span> <span class="option" onclick="checkAnswer(this)">not increasing</span></li>
+                    <li data-answer="stopping">I think we should consider ______ cars from entering the centre. <span class="option" onclick="checkAnswer(this)">stop</span> <span class="option" onclick="checkAnswer(this)">stopping</span> <span class="option" onclick="checkAnswer(this)">to stop</span></li>
+                    <li data-answer="to ride">My parents have warned me ______ my bike on busy main roads. <span class="option" onclick="checkAnswer(this)">to ride</span> <span class="option" onclick="checkAnswer(this)">ride</span> <span class="option" onclick="checkAnswer(this)">riding</span></li>
+                    <li data-answer="not to ride">They warned me ______ my bike on busy main roads. <span class="option" onclick="checkAnswer(this)">to not ride</span> <span class="option" onclick="checkAnswer(this)">not to ride</span> <span class="option" onclick="checkAnswer(this)">not riding</span></li>
+                    <li data-answer="to provide">The mayor must promise ______ more cycle lanes. <span class="option" onclick="checkAnswer(this)">to provide</span> <span class="option" onclick="checkAnswer(this)">provide</span> <span class="option" onclick="checkAnswer(this)">providing</span></li>
+                    <li data-answer="to offer">We need to persuade employers ______ loans to their employees. <span class="option" onclick="checkAnswer(this)">to offer</span> <span class="option" onclick="checkAnswer(this)">offer</span> <span class="option" onclick="checkAnswer(this)">offering</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans10bg1')">Show Answers</button>
+                <div id="ans10bg1" class="answers">الإجابات: 1. travelling, 2. to walk, 3. to give up, 4. replacing, 5. not to increase, 6. stopping, 7. to ride, 8. not to ride, 9. to provide, 10. to offer</div>
+            </div>
+
+            <div class="grammar-box">
+                <h3>10C: Reported Questions</h3>
+                <div class="arabic-label">إذا وجدت الكلمة التالية → فاختر للفراغ</div>
+                <div class="arabic-grammar-note">
+                    ملاحظة عربية: عند تحويل السؤال إلى غير مباشر: نحذف <span class="eng-term">do/did</span>، ونغير ترتيب الكلمات ليصبح مثل الجملة الخبرية، ونضيف <span class="eng-term">if/whether</span> للأسئلة التي لا تحتوي على كلمة استفهام.
+                </div>
+                <table>
+                    <tr><th>If you find</th><th>Choose</th></tr>
+                    <tr><td><span class="keyword">question with do/did → remove ______</span></td><td><strong>do/did</strong></td></tr>
+                    <tr><td><span class="keyword">question word order → change to ______</span></td><td><strong>statement word order</strong></td></tr>
+                    <tr><td><span class="keyword">yes/no question → add ______</span></td><td><strong>if / whether</strong></td></tr>
+                    <tr><td><span class="keyword">ask + object + ______ (for requests)</span></td><td><strong>to + infinitive</strong></td></tr>
+                    <tr><td><span class="keyword">tense changes follow ______ rules</span></td><td><strong>reported statements</strong></td></tr>
+                </table>
+            </div>
+            
+            <div class="quiz">
+                <h4>Quiz 10C-G1</h4>
+                <ol>
+                    <li data-answer="why I wanted">He asked me ______ to work in a clothes shop. <span class="option" onclick="checkAnswer(this)">why I wanted</span> <span class="option" onclick="checkAnswer(this)">why I want</span> <span class="option" onclick="checkAnswer(this)">why did I want</span></li>
+                    <li data-answer="if I had worked">She asked ______ in a shop before. <span class="option" onclick="checkAnswer(this)">if I worked</span> <span class="option" onclick="checkAnswer(this)">if I had worked</span> <span class="option" onclick="checkAnswer(this)">if had I worked</span></li>
+                    <li data-answer="how many days I could work">He wanted to know ______ per week. <span class="option" onclick="checkAnswer(this)">how many days I could work</span> <span class="option" onclick="checkAnswer(this)">how many days I can work</span> <span class="option" onclick="checkAnswer(this)">how many days could I work</span></li>
+                    <li data-answer="if this was">She asked ______ my first interview. <span class="option" onclick="checkAnswer(this)">was this</span> <span class="option" onclick="checkAnswer(this)">if this was</span> <span class="option" onclick="checkAnswer(this)">if this had been</span></li>
+                    <li data-answer="what I did before">He wanted to know ______. <span class="option" onclick="checkAnswer(this)">what I did before</span> <span class="option" onclick="checkAnswer(this)">what I do before</span> <span class="option" onclick="checkAnswer(this)">what did I do</span></li>
+                    <li data-answer="to help him">Can you help me? → He asked me ______. <span class="option" onclick="checkAnswer(this)">helping him</span> <span class="option" onclick="checkAnswer(this)">to help him</span> <span class="option" onclick="checkAnswer(this)">help him</span></li>
+                    <li data-answer="to take a seat">Please, take a seat. → She asked me ______. <span class="option" onclick="checkAnswer(this)">to take a seat</span> <span class="option" onclick="checkAnswer(this)">taking a seat</span> <span class="option" onclick="checkAnswer(this)">take a seat</span></li>
+                    <li data-answer="to give him a lift">Can you give me a lift? → Jack wants ______. <span class="option" onclick="checkAnswer(this)">giving him a lift</span> <span class="option" onclick="checkAnswer(this)">to give him a lift</span> <span class="option" onclick="checkAnswer(this)">give him a lift</span></li>
+                    <li data-answer="not to sit there">Don't sit there. → Irina told me ______. <span class="option" onclick="checkAnswer(this)">not to sit there</span> <span class="option" onclick="checkAnswer(this)">to not sit there</span> <span class="option" onclick="checkAnswer(this)">not sit there</span></li>
+                    <li data-answer="me to go">I'd like you to go to the conference. → My boss wants ______. <span class="option" onclick="checkAnswer(this)">me to go</span> <span class="option" onclick="checkAnswer(this)">me going</span> <span class="option" onclick="checkAnswer(this)">me go</span></li>
+                </ol>
+                <button class="show-answers" onclick="toggleAnswers('ans10cg1')">Show Answers</button>
+                <div id="ans10cg1" class="answers">الإجابات: 1. why I wanted, 2. if I had worked, 3. how many days I could, 4. if this was, 5. what I did before, 6. to help him, 7. to take a seat, 8. to give him a lift, 9. not to sit there, 10. me to go</div>
+            </div>
+        </div>
+
+        <!-- SUMMARY SECTION -->
+        <div id="summary" class="section">
+            <div class="section-title">Quick Reference: Vocabulary Decisions (Units 9-10)</div>
+            
+            <div class="tip-box">
+                <h4>Golden Exam Tip</h4>
+                <p>Read the full sentence before answering, and look for <strong>the English keyword that follows the blank</strong> to determine the answer. Most vocabulary questions rely on <strong>fixed collocations</strong> - memorize them as they appear!</p>
+            </div>
+
+            <div class="vocab-box">
+                <h3>Vocabulary Decisions</h3>
+                <pre class="ltr-block">
+Did you find a blank + keyword?
+|
++ save money / wait → save up for
++ pay with coins/notes → pay in cash
++ keep paper after buying → keep the receipt
++ good price / deal → bargain / special offer
++ time when prices lower → sales
++ new product available → go on sale
++ heavy items / to home → delivered
++ get money back → get a refund / exchange
++ stop an order → cancel an order
+|
++ angry → furious
++ bad → terrible / awful / disgusting
++ beautiful → gorgeous / wonderful
++ big → huge / enormous
++ frightened → terrified
++ good → excellent / brilliant
++ happy → thrilled / delighted
++ small → tiny
++ tired → exhausted
++ surprised → shocked
++ interesting → fascinating
++ old → ancient
+|
++ not showing real things → abstract
++ very bad → awful / terrible
++ happy feeling → cheerful
++ many colours → colourful
++ showing imagination → creative / original
++ very interesting → fascinating
++ old style → old-fashioned / traditional
++ showing strong emotion → powerful
++ as they really are → realistic
++ very impressive → spectacular
++ strange / unusual → weird
++ art from stone/metal → sculpture
++ art in public places → public art
+|
++ school ages 5-11 → primary school
++ school ages 11-18 → secondary school
++ school you live in → boarding school
++ government school → state school
++ paid school → private school
++ money for education → fees
++ exam results → grades
++ succeed in exam → pass
++ sit an exam → take
++ subjects you study → subjects
++ certificate → qualifications
++ higher education → university
+|
++ convince someone → persuade
++ tell not to do → warn
++ say you will do → promise
++ say no → refuse
++ motivate someone → encourage
++ advise as good idea → recommend / suggest
++ think about doing → consider
++ stop doing → avoid
++ begin doing → start
+|
++ organise meetings → arrange
++ collect information → do research
++ hire people → employ
++ talk about ideas → give presentations
++ ask candidates questions → interview
++ be responsible for → manage
++ offer job → offer someone a job
++ help customers → serve customers
++ organise in advance → set up meetings
++ write documents → write reports
++ collaborate → work in a team
+                </pre>
+            </div>
+
+            <div class="section-title">Quick Reference: Grammar Decisions (Units 9-10)</div>
+            
+            <div class="grammar-box">
+                <h3>Grammar Decisions</h3>
+                <pre class="ltr-block">
+Did you find a blank + keyword?
+|
++ is/are/was/were + ______ → past participle (passive)
++ has/have been + ______ → past participle (passive)
++ will be + ______ → past participle (passive)
++ modal + be + ______ → past participle (passive)
++ ______ + agent → by
+|
++ if + ______ + would have + past participle → past perfect
++ imaginary past situation → third conditional
++ expressing regret → third conditional
++ could/might have + past participle → less certain result
++ If I ______ you (past) → had been
+|
++ positive + agree → so + aux + subject / subject + aux + too
++ negative + agree → neither/nor + aux + subject / subject + neg aux + either
++ positive + disagree → subject + neg auxiliary
++ negative + disagree → subject + positive auxiliary
++ I love it → agree → So do I / I do too
++ I don't like it → agree → Neither do I / I don't either
+|
++ present simple → past simple (reported)
++ present continuous → past continuous (reported)
++ past simple → past perfect (reported)
++ present perfect → past perfect (reported)
++ will → would (reported)
++ can → could (reported)
++ I → he/she / we → they (reported)
++ say/tell + ______ + that → object (me/us/him)
+|
++ consider/recommend/suggest/avoid + ______ → verb-ing
++ promise/refuse/agree/decide + ______ → to + infinitive
++ encourage/persuade/warn + object + ______ → to + infinitive
++ make negative: put ______ before verb-ing/to → not
++ start + ______ (both possible) → verb-ing / to + infinitive
+|
++ question with do/did → remove do/did
++ question word order → change to statement order
++ yes/no question → add if / whether
++ ask + object + ______ (requests) → to + infinitive
++ tense changes follow → reported statements rules
+                </pre>
+            </div>
+
+            <div class="tip-box">
+                <h4>How to Use in Exams</h4>
+                <ol style="margin-left: 25px; margin-top: 15px; font-size: 17px; line-height: 2.2;">
+                    <li>Read the full sentence before answering</li>
+                    <li>Look for <strong>the English keyword that follows the blank</strong> to determine the correct rule</li>
+                    <li>Complete the quizzes after each section for practice</li>
+                    <li>Review answers to correct your mistakes</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="print-btn" onclick="window.print()">Print Complete Guide</button>
+
+<script>
+    // Tab Navigation
+    function showSection(sectionId) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // Search - Enhanced for English keywords
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+        const term = e.target.value.toLowerCase().trim();
+        document.querySelectorAll('.section').forEach(section => {
+            const text = section.textContent.toLowerCase();
+            if (term === '') {
+                section.classList.remove('hidden');
+                if (section.id === 'vocab') section.classList.add('active');
+                else section.classList.remove('active');
+            } else {
+                const matches = text.includes(term);
+                section.classList.toggle('hidden', !matches);
+                if (matches) section.classList.add('active');
+            }
+        });
+    });
+
+    // Quiz Answers - FIXED LOGIC: compares clicked text to data-answer attribute
+    // Answer positions randomized: 40% A (first), 40% B (second), 20% C (third)
+    function checkAnswer(el) {
+        const parent = el.closest('li');
+        const correctAnswer = parent.getAttribute('data-answer');
+        const clickedText = el.textContent.trim();
+        const options = parent.querySelectorAll('.option');
+        
+        // Disable further clicks
+        options.forEach(opt => {
+            opt.style.cursor = 'default';
+            opt.onclick = null;
+        });
+
+        // Check correctness and style all options
+        options.forEach(opt => {
+            if (opt.textContent.trim() === correctAnswer) {
+                // Correct answer: green
+                opt.style.background = '#28a745';
+                opt.style.color = 'white';
+                opt.style.borderColor = '#28a745';
+            } else {
+                // Incorrect answer: red
+                opt.style.background = '#dc3545';
+                opt.style.color = 'white';
+                opt.style.borderColor = '#dc3545';
+            }
+        });
+    }
+
+    function toggleAnswers(id) {
+        document.getElementById(id).classList.toggle('show');
+    }
+
+    // Print optimization
+    window.onbeforeprint = function() {
+        document.querySelectorAll('.quiz').forEach(q => q.style.pageBreakInside = 'avoid');
+        document.querySelectorAll('.vocab-box, .grammar-box').forEach(b => b.style.pageBreakInside = 'avoid');
+    };
+</script>
+</body>
+</html>
